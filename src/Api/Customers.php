@@ -31,4 +31,16 @@ class Customers extends AbstractApi
     {
         return $this->post('/customers', $body);
     }
+
+    /**
+     * Get the customer address.
+     *
+     * @param  int  $addressId
+     *
+     * @return  array
+     */
+    public function address(Int $addressId)
+    {
+        return $this->get('/customers/addresses/' . $addressId);
+    }
 }
